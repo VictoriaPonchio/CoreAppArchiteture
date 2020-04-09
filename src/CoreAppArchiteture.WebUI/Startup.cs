@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoreAppArchiteture.Application;
 using CoreAppArchiteture.Infrastructure.Config;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,6 +25,9 @@ namespace CoreAppArchiteture.WebUI
         {
             services.AddControllersWithViews();
             services.AddDbContext(Configuration);
+            services.AddScoped();
+            //Dependency injection of application
+            services.AddApplication();
             //services.AddDbContext<CoreAppContext>(o => o.UseSqlServer(Configuration.GetConnectionString("CoreArchitetureDB")));
         }
 

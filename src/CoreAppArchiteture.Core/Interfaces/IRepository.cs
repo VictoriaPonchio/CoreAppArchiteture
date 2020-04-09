@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CoreAppArchiteture.Core.Interfaces
 {
@@ -11,5 +12,7 @@ namespace CoreAppArchiteture.Core.Interfaces
         T Add<T>(T entity) where T : BaseEntity;
         void Update<T>(T entity) where T : BaseEntity;
         void Delete<T>(T entity) where T : BaseEntity;
+
+        //Task<T> GetByIdWithItemsAsync(int id) 
     }
 }

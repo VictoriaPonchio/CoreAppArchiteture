@@ -7,10 +7,8 @@ using System.Text;
 namespace CoreAppArchiteture.Core.Entities
 {
     [Table("TB_SHOPPING_LIST")]
-    public class ShoppingList
-    {
-        [Key]
-        public int ID { get; set; }
+    public class ShoppingList : BaseEntity
+    { 
         public string Title { get; set; } = string.Empty;
 
         public string Description { get; set; }
